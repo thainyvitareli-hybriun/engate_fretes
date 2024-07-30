@@ -7,7 +7,7 @@ import {AuthContext} from '../contexts';
 const Routes: React.FC = () => {
   const {user} = useContext(AuthContext);
 
-  return user?.token ? <AppRoutes /> : <AuthRoutes />;
+  return user?.access_token ? <AppRoutes /> : <AuthRoutes />;
 };
 
 export default Routes;

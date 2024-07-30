@@ -15,6 +15,7 @@ import {colors, errorMessages} from '../../../assets/config';
 import {Button, TextInput} from '../../../components/molecules';
 import {iModal} from '../../../interfaces/components';
 import {Modal} from '../../../components/organism';
+import {Mask} from '@tboerc/maskfy';
 
 const Login = ({navigation}: any) => {
   const {signIn} = useContext(AuthContext);
@@ -26,7 +27,7 @@ const Login = ({navigation}: any) => {
 
   const formik = useFormik({
     initialValues: {
-      email: '',
+      phone: '',
       password: '',
     },
     validationSchema,
@@ -50,14 +51,16 @@ const Login = ({navigation}: any) => {
 
           <View style={styles.body}>
             <TextInput
-              label="E-mail"
-              keyboardType="email-address"
+              label="Telefone"
+              keyboardType="phone-pad"
               autoCapitalize="none"
-              value={formik.values.email}
-              onChangeText={formik.handleChange('email')}
-              onBlur={formik.handleBlur('email')}
-              touched={formik.touched.email}
-              error={formik.errors.email}
+              value={formik.values.phone}
+              onChangeText={v =>
+                formik.setFieldValue('phone', Mask.phone.value(v))
+              }
+              onBlur={formik.handleBlur('phone')}
+              touched={formik.touched.phone}
+              error={formik.errors.phone}
             />
             <Divider size="xs" />
             <TextInput
@@ -100,10 +103,7 @@ const Login = ({navigation}: any) => {
 };
 
 const validationSchema = yup.object().shape({
-  email: yup
-    .string()
-    .email(errorMessages.email)
-    .required(errorMessages.required),
+  phone: yup.string().required(errorMessages.required),
   password: yup
     .string()
     .min(6, errorMessages.minLength(6))

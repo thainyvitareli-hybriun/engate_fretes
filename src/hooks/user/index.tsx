@@ -10,12 +10,10 @@ const session = async (
   signIn: any,
 ) => {
   try {
-    const {
-      data: {data},
-    } = await api.post('/session', values);
+    const {data} = await api.post('/auth/login', values);
 
     // @ts-ignore
-    api.defaults.headers['Authorization'] = `Bearer ${data.token}`;
+    api.defaults.headers['Authorization'] = `Bearer ${data.access_token}`;
 
     signIn(data);
   } catch (error: any) {

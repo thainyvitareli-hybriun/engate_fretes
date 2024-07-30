@@ -1,9 +1,10 @@
 import {iModal} from './components';
 
 export interface iUser {
+  pv: number;
   name: string;
-  email: string;
-  token: string;
+  phone: string;
+  access_token: string;
 }
 
 export interface iAuth {

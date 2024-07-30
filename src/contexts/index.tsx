@@ -24,12 +24,12 @@ export const AuthProvider: React.FC = ({children}: any) => {
     rawUser = JSON.parse(rawUser);
 
     //@ts-ignore
-    if (rawUser?.token) {
+    if (rawUser?.access_token) {
       //@ts-ignore
-      api.defaults.headers['Authorization'] = `Bearer ${rawUser.token}`;
+      api.defaults.headers['Authorization'] = `Bearer ${rawUser.access_token}`;
 
       try {
-        await api.get('/me');
+        await api.get('/auth/me');
       } catch (error) {
         return false;
       }

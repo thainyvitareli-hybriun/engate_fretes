@@ -1,5 +1,5 @@
 export interface iSession {
-  email: string;
+  phone: string;
   password: string;
 }
 
