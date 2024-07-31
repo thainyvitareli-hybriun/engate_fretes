@@ -19,7 +19,7 @@ export default {
     line: '#CBD5E1',
   },
   text: {
-    color: '#000000',
+    color: '#22222C',
   },
   fonts: {
     p: '#000000',

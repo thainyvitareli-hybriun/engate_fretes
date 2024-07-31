@@ -19,6 +19,7 @@ export interface iDivider {
 
 export interface iInput extends TextInputProps {
   hasError?: boolean | undefined;
+  showUserIcon?: boolean;
 }
 
 export interface iText extends TextProps {
@@ -61,6 +62,7 @@ export interface iButton extends TouchableOpacityProps {
     | '900'
     | undefined;
   outline?: boolean;
+  gradientType?: 'orange' | 'blue' | 'black';
 }
 
 export interface iHeader {
@@ -71,6 +73,7 @@ export interface iTextInput extends TextInputProps {
   label?: string;
   touched?: boolean;
   error?: string;
+  showUserIcon?: boolean;
 }
 
 export interface iCheckBox extends CheckBoxProps {

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Svg, {Path} from 'react-native-svg';
+import Svg, {ClipPath, Defs, G, Path, Rect} from 'react-native-svg';
 
 const Eye = (props: any) => (
   <Svg xmlns="http://www.w3.org/2000/svg" height={24} width={24} {...props}>
@@ -30,9 +30,61 @@ const Home = (props: any) => (
   </Svg>
 );
 
+const CloseLock = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={18}
+    fill="none"
+    {...props}>
+    <G fill="#4B4F5E" clipPath="url(#a)">
+      <Path d="M14.25 6.318V5.25a5.25 5.25 0 1 0-10.5 0v1.068A3.75 3.75 0 0 0 1.5 9.75v4.5A3.754 3.754 0 0 0 5.25 18h7.5a3.754 3.754 0 0 0 3.75-3.75v-4.5a3.75 3.75 0 0 0-2.25-3.432Zm-9-1.068a3.75 3.75 0 0 1 7.5 0V6h-7.5v-.75Zm9.75 9a2.25 2.25 0 0 1-2.25 2.25h-7.5A2.25 2.25 0 0 1 3 14.25v-4.5A2.25 2.25 0 0 1 5.25 7.5h7.5A2.25 2.25 0 0 1 15 9.75v4.5Z" />
+      <Path d="M9 10.5a.75.75 0 0 0-.75.75v1.5a.75.75 0 1 0 1.5 0v-1.5A.75.75 0 0 0 9 10.5Z" />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M0 0h18v18H0z" />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
+
+const OpenLock = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={18}
+    fill="none"
+    viewBox="0 -960 960 960"
+    {...props}>
+    <Path d="M240-640h360v-80q0-50-35-85t-85-35q-50 0-85 35t-35 85h-80q0-83 58.5-141.5T480-920q83 0 141.5 58.5T680-720v80h40q33 0 56.5 23.5T800-560v400q0 33-23.5 56.5T720-80H240q-33 0-56.5-23.5T160-160v-400q0-33 23.5-56.5T240-640Zm0 480h480v-400H240v400Zm240-120q33 0 56.5-23.5T560-360q0-33-23.5-56.5T480-440q-33 0-56.5 23.5T400-360q0 33 23.5 56.5T480-280ZM240-160v-400 400Z" />
+  </Svg>
+);
+
+const User = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={18}
+    fill="none"
+    {...props}>
+    <G fill="#4B4F5E" clipPath="url(#a)">
+      <Path d="M9 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm0-7.5a3 3 0 1 1 0 6 3 3 0 0 1 0-6ZM9 10.5a6.758 6.758 0 0 0-6.75 6.75.75.75 0 1 0 1.5 0 5.25 5.25 0 0 1 10.5 0 .75.75 0 1 0 1.5 0A6.758 6.758 0 0 0 9 10.5Z" />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M0 0h18v18H0z" />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
+
 export default {
   Eye,
   EyeOff,
   ArrowLeft,
   Home,
+  CloseLock,
+  OpenLock,
+  User,
 };

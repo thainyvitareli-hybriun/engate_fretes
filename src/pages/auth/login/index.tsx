@@ -16,8 +16,7 @@ import {Button, TextInput} from '../../../components/molecules';
 import {iModal} from '../../../interfaces/components';
 import {Modal} from '../../../components/organism';
 import {Mask} from '@tboerc/maskfy';
-import LinearGradient from 'react-native-linear-gradient';
-
+import ButtonGradient from '../../../components/molecules/button-gradient';
 const Login = ({navigation}: any) => {
   const {signIn} = useContext(AuthContext);
   const [modal, setModal] = useState({} as iModal);
@@ -36,12 +35,6 @@ const Login = ({navigation}: any) => {
   });
 
   return (
-    // <LinearGradient
-    //   colors={['#E1FDFE', '#F9FEFA', '#F9FEFA', '#FDF6DD', '#FFF4D1']}
-    //   style={styles.gradient}
-    //   // locations={[1, 1, 0.2]}
-    //   start={{x: 1, y: 0}}
-    //   end={{x: 0, y: 1}}>
     <SafeAreaView style={styles.container}>
       <KeyboardAvoidingView
         style={styles.keyboard}
@@ -58,7 +51,6 @@ const Login = ({navigation}: any) => {
 
           <View style={styles.body}>
             <TextInput
-              label="Telefone"
               keyboardType="phone-pad"
               autoCapitalize="none"
               value={formik.values.phone}
@@ -68,6 +60,7 @@ const Login = ({navigation}: any) => {
               onBlur={formik.handleBlur('phone')}
               touched={formik.touched.phone}
               error={formik.errors.phone}
+              showUserIcon
             />
             <Divider size="xs" />
             <TextInput
@@ -80,25 +73,27 @@ const Login = ({navigation}: any) => {
               touched={formik.touched.password}
               error={formik.errors.password}
             />
-            <Divider size="xs" />
-            <Text style={styles.recoveryAccount}>Recuperar conta</Text>
             <Divider size="md" />
-            <Button
+            <ButtonGradient
               width={'full'}
-              label={'Acessar conta'}
+              label={'FAZER LOGIN'}
+              outline
+              gradientType="orange"
               isLoading={formik.isSubmitting}
               onPress={() => formik.handleSubmit()}
             />
-            <Divider size="lg" />
+            <Divider size="md" />
+            <Text style={styles.recoveryAccount}>Esqueci minha senha</Text>
+            <Divider size="biggest" />
             <Text weight="300" style={styles.createdAccount}>
-              Registre-se
+              Ainda não tenho uma conta
             </Text>
             <Divider size="sm" />
-            <Button
+            <ButtonGradient
               width={'full'}
               outline
-              color={colors.primary}
-              label={'Registrar uma nova conta'}
+              gradientType="black"
+              label={'CRIAR UMA CONTA GRÁTIS'}
               onPress={() => navigation.navigate('Register')}
             />
           </View>
@@ -106,7 +101,6 @@ const Login = ({navigation}: any) => {
       </KeyboardAvoidingView>
       <Modal {...modal} />
     </SafeAreaView>
-    // </LinearGradient>
   );
 };
 

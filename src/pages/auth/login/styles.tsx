@@ -27,8 +27,8 @@ export default StyleSheet.create({
     flex: 1,
   },
   recoveryAccount: {
-    alignSelf: 'flex-end',
-    color: colors.primary,
+    alignSelf: 'center',
+    color: colors.text.color,
   },
   createdAccount: {alignSelf: 'center'},
 });
