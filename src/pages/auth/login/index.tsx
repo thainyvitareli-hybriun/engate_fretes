@@ -16,6 +16,7 @@ import {Button, TextInput} from '../../../components/molecules';
 import {iModal} from '../../../interfaces/components';
 import {Modal} from '../../../components/organism';
 import {Mask} from '@tboerc/maskfy';
+import LinearGradient from 'react-native-linear-gradient';
 
 const Login = ({navigation}: any) => {
   const {signIn} = useContext(AuthContext);
@@ -35,6 +36,12 @@ const Login = ({navigation}: any) => {
   });
 
   return (
+    // <LinearGradient
+    //   colors={['#E1FDFE', '#F9FEFA', '#F9FEFA', '#FDF6DD', '#FFF4D1']}
+    //   style={styles.gradient}
+    //   // locations={[1, 1, 0.2]}
+    //   start={{x: 1, y: 0}}
+    //   end={{x: 0, y: 1}}>
     <SafeAreaView style={styles.container}>
       <KeyboardAvoidingView
         style={styles.keyboard}
@@ -99,6 +106,7 @@ const Login = ({navigation}: any) => {
       </KeyboardAvoidingView>
       <Modal {...modal} />
     </SafeAreaView>
+    // </LinearGradient>
   );
 };
 

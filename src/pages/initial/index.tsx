@@ -2,15 +2,22 @@ import {View} from 'react-native';
 import React, {useContext, useEffect} from 'react';
 
 import {AuthContext} from '../../contexts';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const News: React.FC = ({navigation}: any) => {
+const Initial: React.FC = ({navigation}: any) => {
   const {isLogged} = useContext(AuthContext);
 
   const validate = async () => {
     const logged = await isLogged();
 
     if (!logged) {
-      navigation.replace('Login');
+      const viewedIntro = await AsyncStorage.getItem('@viewedIntro');
+
+      if (viewedIntro) {
+        navigation.replace('Login');
+      } else {
+        navigation.replace('Intro');
+      }
     }
   };
 
@@ -20,4 +27,4 @@ const News: React.FC = ({navigation}: any) => {
   return <View />;
 };
 
-export default News;
+export default Initial;

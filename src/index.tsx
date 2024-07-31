@@ -1,17 +1,25 @@
 //@ts-nocheck
-import {NavigationContainer} from '@react-navigation/native';
+import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 
 import {AuthProvider} from './contexts';
 import Routes from './routes/';
+import CustomThemeProvider from './contexts/theme';
+
+const theme = {
+  ...DefaultTheme,
+  colors: {...DefaultTheme.colors, background: 'transparent'},
+};
 
 const App: React.FC = () => {
   return (
-    <NavigationContainer>
-      <AuthProvider>
-        <Routes />
-      </AuthProvider>
-    </NavigationContainer>
+    <CustomThemeProvider>
+      <NavigationContainer theme={theme}>
+        <AuthProvider>
+          <Routes />
+        </AuthProvider>
+      </NavigationContainer>
+    </CustomThemeProvider>
   );
 };
 
