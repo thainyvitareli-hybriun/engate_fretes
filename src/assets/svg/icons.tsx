@@ -221,6 +221,17 @@ const Chat = (props: any) => (
   </Svg>
 );
 
+const DashedLine = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={277}
+    height={1}
+    fill="none"
+    {...props}>
+    <Path stroke="#CFC9C4" strokeDasharray="3 3" d="M0 .5h277" />
+  </Svg>
+);
+
 export default {
   Eye,
   EyeOff,
@@ -235,4 +246,5 @@ export default {
   Calendar,
   Search,
   Chat,
+  DashedLine,
 };

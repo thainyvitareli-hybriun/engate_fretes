@@ -1,4 +1,5 @@
 import {CheckBoxProps} from '@react-native-community/checkbox';
+import {ReactNode} from 'react';
 import {TextInputProps, TouchableOpacityProps} from 'react-native';
 import {TextProps} from 'react-native-svg';
 
@@ -78,4 +79,20 @@ export interface iTextInput extends TextInputProps {
 
 export interface iCheckBox extends CheckBoxProps {
   label?: any;
+}
+
+export interface iValidationCode {
+  rightCode: string;
+  onSubmit: any;
+  showLogo?: boolean;
+  phone: string;
+  sendVerificationCode: any;
+}
+
+export interface iContentModal {
+  isVisible: boolean;
+  title?: string;
+  children: ReactNode;
+  onClose?: () => void;
+  full?: boolean;
 }

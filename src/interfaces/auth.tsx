@@ -6,7 +6,7 @@ export interface iUser {
   name: string;
   phone: string;
   access_token: string;
-  phone_confirmed?: boolean;
+  phone_confirmed: boolean;
   profile?: Profile;
   status: number;
   total_coins: number;

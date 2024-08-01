@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet} from 'pr-unit';
 import {colors, metrics} from '../../../assets/config';
 
 export default StyleSheet.create({
@@ -18,15 +18,15 @@ export default StyleSheet.create({
     shadowOpacity: 0.22,
     shadowRadius: 2.22,
     elevation: 3,
-    paddingBottom: 35,
+    paddingBottom: 100,
   },
   tabItem: {
     // backgroundColor: `yellow`,
     flex: 1,
     flexDirection: 'row',
-    padding: 5,
     alignItems: 'center',
     justifyContent: 'center',
+    padding: 20,
   },
   searchTab: {
     backgroundColor: 'orange',

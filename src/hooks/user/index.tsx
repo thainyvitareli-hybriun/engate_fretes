@@ -91,4 +91,23 @@ const register = async (
   }
 };
 
-export default {session, register};
+const update = async (data: any) => {
+  const {data: resp} = await api.patch('/users', data);
+
+  return resp;
+};
+
+const getVerificationCode = async () => {
+  const {data: result} = await api.get('/users/verification-code');
+
+  return result;
+};
+
+const confirmePhone = async () => {
+  console.log('confirmar');
+  const {data: result} = await api.post('/users/confirme-phone');
+
+  return result;
+};
+
+export default {session, register, update, getVerificationCode, confirmePhone};

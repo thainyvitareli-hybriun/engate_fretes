@@ -1,6 +1,5 @@
 import React from 'react';
 import {View, TouchableOpacity, Text} from 'react-native';
-import {BottomTabBarProps} from '@react-navigation/bottom-tabs';
 import styles from './styles';
 
 const CustomTabBar = ({state, descriptors, navigation}: any) => {

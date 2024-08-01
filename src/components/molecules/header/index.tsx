@@ -11,7 +11,7 @@ import colors from '../../../assets/config/colors';
 const Header = ({hasBack}: iHeader) => {
   const navigation = useNavigation();
   const {user} = useContext(AuthContext);
-  console.log(user);
+
   return (
     <View style={styles.container}>
       {hasBack && (
