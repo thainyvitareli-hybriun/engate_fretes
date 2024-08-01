@@ -1,6 +1,7 @@
 export default {
   background: '#ffffff',
   primary: '#127DFD',
+  secondary: '#FF912C',
   color: '#FFFFFF',
   button: {
     background: '#127DFD',
@@ -25,5 +26,9 @@ export default {
     p: '#000000',
     title: '#000000',
     subtitle: '#000000',
+  },
+  icons: {
+    focused: '#4B4F5E',
+    color: '#E6E6E6',
   },
 };

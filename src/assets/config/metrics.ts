@@ -23,6 +23,7 @@ export default {
   },
   tabBar: {
     height: 180,
-    padding: 20,
+    padding: 15,
+    borderRadios: 30,
   },
 };

@@ -33,7 +33,7 @@ const ButtonGradient = ({
   outline = false,
   backgroundColor = colors.primary,
   color = 'white',
-  weight = 'normal',
+  weight = 'bold',
   gradientType,
   ...props
 }: iButton) => {

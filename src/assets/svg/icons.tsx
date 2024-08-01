@@ -1,5 +1,12 @@
 import * as React from 'react';
-import Svg, {ClipPath, Defs, G, Path, Rect} from 'react-native-svg';
+import Svg, {
+  ClipPath,
+  Defs,
+  G,
+  LinearGradient,
+  Path,
+  Stop,
+} from 'react-native-svg';
 
 const Eye = (props: any) => (
   <Svg xmlns="http://www.w3.org/2000/svg" height={24} width={24} {...props}>
@@ -21,20 +28,30 @@ const ArrowLeft = (props: any) => (
 
 const Home = (props: any) => (
   <Svg
-    width={16}
-    height={18}
-    fill="none"
     xmlns="http://www.w3.org/2000/svg"
+    width={20}
+    height={20}
+    fill="none"
     {...props}>
-    <Path d="M8 0 0 6v12h5v-7h6v7h5V6L8 0Z" fill="#fff" />
+    <G clipPath="url(#a)">
+      <Path
+        fill={props.fill}
+        d="m19.267 7.558-6.32-6.322a4.173 4.173 0 0 0-5.894 0L.733 7.558A2.482 2.482 0 0 0 0 9.325v8.18a2.5 2.5 0 0 0 2.5 2.5h15a2.5 2.5 0 0 0 2.5-2.5v-8.18a2.481 2.481 0 0 0-.733-1.767ZM12.5 18.339h-5v-3.278a2.5 2.5 0 0 1 5 0v3.278Zm5.833-.833a.834.834 0 0 1-.833.833h-3.333v-3.278a4.167 4.167 0 0 0-8.334 0v3.278H2.5a.833.833 0 0 1-.833-.833V9.325a.84.84 0 0 1 .244-.59l6.32-6.318a2.507 2.507 0 0 1 3.537 0l6.321 6.321a.84.84 0 0 1 .244.587v8.18Z"
+      />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M0 0h20v20H0z" />
+      </ClipPath>
+    </Defs>
   </Svg>
 );
 
 const CloseLock = (props: any) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
-    width={18}
-    height={18}
+    width={20}
+    height={20}
     fill="none"
     {...props}>
     <G fill="#4B4F5E" clipPath="url(#a)">
@@ -52,8 +69,8 @@ const CloseLock = (props: any) => (
 const OpenLock = (props: any) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
-    width={18}
-    height={18}
+    width={20}
+    height={20}
     fill="none"
     viewBox="0 -960 960 960"
     {...props}>
@@ -79,6 +96,131 @@ const User = (props: any) => (
   </Svg>
 );
 
+const LogoIcon = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={50}
+    height={50}
+    fill="none"
+    {...props}>
+    <Path
+      fill="url(#a)"
+      fillRule="evenodd"
+      d="M25 50c13.807 0 25-11.193 25-25S38.807 0 25 0 0 11.193 0 25s11.193 25 25 25ZM13.411 23.078c0-2.56 2.077-5.394 4.636-6.327L36.602 10c0 2.565-2.076 5.394-4.636 6.328l-9.285 3.378h.008l-.011.004v-.003l-9.267 3.371Zm9.267-3.368v4.637l9.277-3.378c0 2.565-2.076 5.394-4.636 6.328l-4.636 1.686v4.636c0 2.565-2.076 5.394-4.636 6.328v-9.278l-4.636 1.687c0-2.56 2.077-5.394 4.642-6.328v-4.636l4.625-1.682Zm4.663 17.084-4.02 1.46c0-2.218 1.795-4.673 4.02-5.48l4.02-1.462c0 2.22-1.8 4.674-4.02 5.482Z"
+      clipRule="evenodd"
+    />
+    <Defs>
+      <LinearGradient
+        id="a"
+        x1={29.228}
+        x2={30.882}
+        y1={53.676}
+        y2={-4.228}
+        gradientUnits="userSpaceOnUse">
+        <Stop stopColor="#FF7121" />
+        <Stop offset={1} stopColor="#FFCE1B" />
+      </LinearGradient>
+    </Defs>
+  </Svg>
+);
+
+const Notification = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={20}
+    height={20}
+    fill="none"
+    {...props}>
+    <G clipPath="url(#a)">
+      <Path
+        fill="#4B4F5E"
+        d="m19.736 11.954-1.662-5.981a8.156 8.156 0 0 0-15.82.414L.969 12.176a4.375 4.375 0 0 0 4.27 5.324h.975a4.375 4.375 0 0 0 8.575 0h.733a4.376 4.376 0 0 0 4.216-5.546Zm-9.235 7.296a2.625 2.625 0 0 1-2.464-1.75h4.928a2.626 2.626 0 0 1-2.464 1.75Zm7.11-4.537a2.604 2.604 0 0 1-2.09 1.037H5.238a2.625 2.625 0 0 1-2.562-3.195l1.287-5.789a6.406 6.406 0 0 1 12.425-.325l1.662 5.981a2.606 2.606 0 0 1-.44 2.291Z"
+      />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M0 0h21v21H0z" />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
+
+const Setting = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={20}
+    height={20}
+    fill="none"
+    {...props}>
+    <Path
+      fill="#4B4F5E"
+      d="M11 7.333a3.667 3.667 0 1 0 0 7.334 3.667 3.667 0 0 0 0-7.334Zm0 5.5a1.833 1.833 0 1 1 0-3.666 1.833 1.833 0 0 1 0 3.666Z"
+    />
+    <Path
+      fill="#4B4F5E"
+      d="m19.52 12.742-.407-.235a8.343 8.343 0 0 0 0-3.016l.407-.234a2.752 2.752 0 0 0-2.75-4.767l-.408.235a8.23 8.23 0 0 0-2.611-1.505v-.47a2.75 2.75 0 0 0-5.5 0v.47c-.956.338-1.841.85-2.611 1.51l-.41-.238a2.751 2.751 0 1 0-2.75 4.766l.407.235a8.342 8.342 0 0 0 0 3.016l-.407.234a2.752 2.752 0 0 0 2.75 4.767l.408-.235A8.23 8.23 0 0 0 8.25 18.78v.47a2.75 2.75 0 0 0 5.5 0v-.47a8.228 8.228 0 0 0 2.611-1.51l.41.237a2.751 2.751 0 1 0 2.75-4.766h-.001ZM17.184 9.28a6.461 6.461 0 0 1 0 3.438.917.917 0 0 0 .426 1.038l.993.574a.917.917 0 1 1-.916 1.589l-.996-.576a.916.916 0 0 0-1.114.151 6.402 6.402 0 0 1-2.972 1.72.917.917 0 0 0-.689.887v1.149a.917.917 0 0 1-1.833 0v-1.148a.917.917 0 0 0-.689-.888 6.402 6.402 0 0 1-2.971-1.722.917.917 0 0 0-1.114-.152l-.994.575a.918.918 0 1 1-.916-1.587l.993-.574a.917.917 0 0 0 .426-1.039 6.46 6.46 0 0 1 0-3.437.917.917 0 0 0-.427-1.035l-.993-.574a.917.917 0 1 1 .916-1.589l.996.576a.917.917 0 0 0 1.113-.148A6.402 6.402 0 0 1 9.395 4.79a.917.917 0 0 0 .689-.892V2.75a.917.917 0 0 1 1.833 0v1.148a.916.916 0 0 0 .689.888 6.402 6.402 0 0 1 2.972 1.722.917.917 0 0 0 1.114.152l.994-.575a.917.917 0 1 1 .916 1.588l-.993.573a.916.916 0 0 0-.425 1.035Z"
+    />
+  </Svg>
+);
+
+const Calendar = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={20}
+    height={20}
+    fill="none"
+    {...props}>
+    <G fill={props.fill} clipPath="url(#a)" opacity={0.5}>
+      <Path d="M15.833 1.667H15V.833a.833.833 0 1 0-1.667 0v.834H6.667V.833A.833.833 0 0 0 5 .833v.834h-.833A4.172 4.172 0 0 0 0 5.833v10A4.172 4.172 0 0 0 4.167 20h11.666A4.172 4.172 0 0 0 20 15.833v-10a4.172 4.172 0 0 0-4.167-4.166ZM1.667 5.833a2.5 2.5 0 0 1 2.5-2.5h11.666a2.5 2.5 0 0 1 2.5 2.5v.834H1.667v-.834Zm14.166 12.5H4.167a2.5 2.5 0 0 1-2.5-2.5v-7.5h16.666v7.5a2.5 2.5 0 0 1-2.5 2.5Z" />
+      <Path d="M10 13.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM5.834 13.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM14.166 13.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z" />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M0 0h20v20H0z" />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
+const Search = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={20}
+    height={20}
+    fill="none"
+    {...props}>
+    <G clipPath="url(#a)">
+      <Path
+        fill={props.fill}
+        d="m16.792 15.79-4.228-4.227a7.096 7.096 0 1 0-1.002 1.001l4.228 4.228a.708.708 0 0 0 1.002-1.001Zm-9.71-3.04a5.667 5.667 0 1 1 5.667-5.667 5.673 5.673 0 0 1-5.666 5.667Z"
+      />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M0 0h17v17H0z" />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
+
+const Chat = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={20}
+    height={20}
+    fill="none"
+    {...props}>
+    <G fill={props.fill} clipPath="url(#a)" opacity={0.5}>
+      <Path d="M20 9.372A10.01 10.01 0 1 0 10.016 20h5.82A4.17 4.17 0 0 0 20 15.833v-6.46Zm-1.666 6.461a2.5 2.5 0 0 1-2.5 2.5h-5.819a8.367 8.367 0 0 1-7.966-5.818 8.264 8.264 0 0 1-.327-3.48 8.37 8.37 0 0 1 7.213-7.3c.36-.045.721-.068 1.083-.068a8.268 8.268 0 0 1 5.316 1.916 8.369 8.369 0 0 1 3 5.869v6.381Z" />
+      <Path d="M6.667 7.5h3.334a.833.833 0 0 0 0-1.667H6.667a.833.833 0 1 0 0 1.667ZM13.334 9.167H6.667a.833.833 0 1 0 0 1.666h6.667a.833.833 0 1 0 0-1.666ZM13.334 12.5H6.667a.833.833 0 1 0 0 1.667h6.667a.833.833 0 1 0 0-1.667Z" />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M0 0h20v20H0z" />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
+
 export default {
   Eye,
   EyeOff,
@@ -87,4 +229,10 @@ export default {
   CloseLock,
   OpenLock,
   User,
+  LogoIcon,
+  Notification,
+  Setting,
+  Calendar,
+  Search,
+  Chat,
 };

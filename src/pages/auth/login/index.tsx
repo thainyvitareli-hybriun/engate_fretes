@@ -5,7 +5,7 @@ import {KeyboardAvoidingView, Platform, ScrollView, View} from 'react-native';
 
 import styles from './styles';
 import {UserHooks} from '../../../hooks';
-import {Logo} from '../../../assets/svg';
+import {Icons, Logo} from '../../../assets/svg';
 import {AuthContext} from '../../../contexts';
 
 import {iSession} from '../../../interfaces/hooks/user';
@@ -44,13 +44,16 @@ const Login = ({navigation}: any) => {
           contentContainerStyle={styles.scroll}
           showsVerticalScrollIndicator={false}>
           <View style={styles.header}>
-            <Logo.Original />
+            <Icons.LogoIcon />
           </View>
 
           <Divider size="lg" />
 
           <View style={styles.body}>
+            <Text style={styles.accessAccount}>Acesse sua conta</Text>
+            <Divider size="sm" />
             <TextInput
+              placeholder="Celular"
               keyboardType="phone-pad"
               autoCapitalize="none"
               value={formik.values.phone}
@@ -64,7 +67,7 @@ const Login = ({navigation}: any) => {
             />
             <Divider size="xs" />
             <TextInput
-              label="Senha"
+              placeholder="Senha"
               secureTextEntry={true}
               autoCapitalize="none"
               value={formik.values.password}
@@ -85,9 +88,7 @@ const Login = ({navigation}: any) => {
             <Divider size="md" />
             <Text style={styles.recoveryAccount}>Esqueci minha senha</Text>
             <Divider size="biggest" />
-            <Text weight="300" style={styles.createdAccount}>
-              Ainda não tenho uma conta
-            </Text>
+            <Text style={styles.createdAccount}>Ainda não tenho uma conta</Text>
             <Divider size="sm" />
             <ButtonGradient
               width={'full'}

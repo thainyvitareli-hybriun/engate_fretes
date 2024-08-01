@@ -7,33 +7,70 @@ const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 import {Icons} from '../assets/svg';
-import {colors} from '../assets/config';
+import {colors, metrics} from '../assets/config';
 import {Home, News} from '../pages';
+import Appointments from '../pages/app/appointments';
+import Search from '../pages/app/search';
+import Chat from '../pages/app/chat';
+import {Text} from '../components/atoms';
+import TabBar from '../components/atoms/custom-tab';
 
 const OPTIONS = [
   {
     name: 'Home',
-    icon: <Icons.Home fill={'white'} />,
+    icon: (fill: string) => <Icons.Home fill={fill} />,
     component: Home,
-    label: 'Início',
+    label: '',
+  },
+  {
+    name: 'Calendar',
+    icon: (fill: string) => <Icons.Calendar fill={fill} />,
+    component: Appointments,
+    label: '',
+  },
+  {
+    name: 'Search',
+    icon: (fill: string) => <Icons.Search fill={fill} />,
+    component: Search,
+    label: '',
+  },
+  {
+    name: 'Outro',
+    icon: (fill: string) => <Icons.Notification fill={fill} />,
+    component: Home,
+    label: '',
+  },
+  {
+    name: 'Chat',
+    icon: (fill: string) => <Icons.Chat fill={fill} />,
+    component: Chat,
+    label: '',
   },
 ];
 
 const TabNavigator = () => {
   return (
     <Tab.Navigator
+      tabBar={props => <TabBar {...props} />}
       screenOptions={{
         headerShown: false,
-        tabBarStyle: {
-          backgroundColor: colors.primary,
-        },
-        tabBarInactiveTintColor: '#FFFFFF',
-        tabBarActiveTintColor: '#FFFFFF',
       }}>
-      {OPTIONS.map((option, index) => (
+      {OPTIONS.map((option: any, index) => (
         <Tab.Screen
           key={index}
-          options={{tabBarIcon: ({}) => option.icon, tabBarLabel: option.label}}
+          options={{
+            tabBarIcon: ({focused}) =>
+              option.icon(focused ? colors.icons.focused : colors.icons.color),
+
+            tabBarLabel: ({focused}) => (
+              <Text
+                type="small"
+                weight="500"
+                color={focused ? colors.icons.focused : colors.icons.color}>
+                {option.label}
+              </Text>
+            ),
+          }}
           name={option.name}
           component={option.component}
         />

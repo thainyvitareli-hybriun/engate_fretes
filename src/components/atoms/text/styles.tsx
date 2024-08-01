@@ -3,7 +3,7 @@ import {metrics} from '../../../assets/config';
 
 export default StyleSheet.create({
   fontFamily: {
-    fontFamily: 'Ariel',
+    fontFamily: 'DM Sans-Regular',
   },
   paragraph: {
     fontSize: metrics.font.paragraph,
@@ -12,11 +12,9 @@ export default StyleSheet.create({
     fontSize: metrics.font.small,
   },
   title: {
-    fontWeight: 'bold',
     fontSize: metrics.font.title,
   },
   subtitle: {
-    fontWeight: 'bold',
     fontSize: metrics.font.subtile,
   },
 });

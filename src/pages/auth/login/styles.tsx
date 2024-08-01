@@ -1,7 +1,5 @@
 import {StyleSheet} from 'pr-unit';
 import {colors, metrics} from '../../../assets/config';
-import LinearGradient from 'react-native-linear-gradient';
-import {Text, View} from 'react-native';
 
 export default StyleSheet.create({
   gradient: {
@@ -21,14 +19,23 @@ export default StyleSheet.create({
   },
   header: {
     flex: 0.3,
-    alignItems: 'center',
+    alignItems: 'flex-end',
   },
   body: {
     flex: 1,
   },
+  accessAccount: {
+    fontWeight: '700',
+    alignSelf: 'center',
+  },
   recoveryAccount: {
     alignSelf: 'center',
     color: colors.text.color,
+    fontWeight: '700',
   },
-  createdAccount: {alignSelf: 'center'},
+  createdAccount: {
+    alignSelf: 'center',
+    fontFamily: 'DMSans-Regular',
+    fontWeight: '500',
+  },
 });
