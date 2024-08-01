@@ -29,7 +29,10 @@ export const AuthProvider: React.FC = ({children}: any) => {
       api.defaults.headers['Authorization'] = `Bearer ${rawUser.access_token}`;
 
       try {
-        await api.get('/auth/me');
+        const {data} = await api.get('/auth/me');
+
+        //@ts-ignore
+        rawUser = {...rawUser, ...data};
       } catch (error) {
         return false;
       }

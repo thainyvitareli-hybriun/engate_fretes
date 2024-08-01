@@ -29,21 +29,15 @@ const OPTIONS = [
     label: '',
   },
   {
-    name: 'Search',
-    icon: (fill: string) => <Icons.Search fill={fill} />,
-    component: Search,
-    label: '',
-  },
-  {
-    name: 'Outro',
-    icon: (fill: string) => <Icons.Notification fill={fill} />,
-    component: Home,
-    label: '',
-  },
-  {
     name: 'Chat',
     icon: (fill: string) => <Icons.Chat fill={fill} />,
     component: Chat,
+    label: '',
+  },
+  {
+    name: 'Search',
+    icon: (fill: string) => <Icons.Search fill={fill} />,
+    component: Search,
     label: '',
   },
 ];

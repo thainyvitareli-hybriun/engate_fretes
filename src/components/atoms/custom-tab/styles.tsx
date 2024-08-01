@@ -18,6 +18,7 @@ export default StyleSheet.create({
     shadowOpacity: 0.22,
     shadowRadius: 2.22,
     elevation: 3,
+    paddingBottom: 35,
   },
   tabItem: {
     // backgroundColor: `yellow`,

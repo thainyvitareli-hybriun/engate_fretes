@@ -6,9 +6,11 @@ import styles from './styles';
 import {AuthContext} from '../../../contexts';
 import {Header} from '../../../components/molecules';
 import {Divider, Text} from '../../../components/atoms';
+import {Modal} from '../../../components/organism';
 
 const Home: React.FC = ({navigation}: any) => {
-  const {signOut} = useContext(AuthContext);
+  const {signOut, user} = useContext(AuthContext);
+
   return (
     <SafeAreaView style={styles.container}>
       <Header />
@@ -27,6 +29,15 @@ const Home: React.FC = ({navigation}: any) => {
           <Text>Sair</Text>
         </TouchableOpacity>
       </View>
+
+      {!user.phone_confirmed && (
+        <Modal
+          icon={'success'}
+          isVisible={false}
+          title="Confirme seu número"
+          content="Você já confirmou seu número de telefone? Se não, confirme agora."
+        />
+      )}
     </SafeAreaView>
   );
 };
