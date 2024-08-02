@@ -4,12 +4,10 @@ import {metrics} from '../../../assets/config';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    // backgroundColor: `yellow`,
     width: '100%',
   },
   item: {
     width: '100%',
-    height: 400,
     backgroundColor: '#FFFFFF',
     alignSelf: 'center',
     marginBottom: 20,

@@ -363,6 +363,32 @@ const Add = (props: any) => (
   </Svg>
 );
 
+const Hexagon = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={78}
+    height={86}
+    fill="none"
+    {...props}>
+    <Path
+      fill="url(#a)"
+      d="M34 1.887a10 10 0 0 1 10 0l28.105 16.226a10 10 0 0 1 5 8.66v32.454a10 10 0 0 1-5 8.66L44 84.113a10 10 0 0 1-10 0L5.895 67.887a10 10 0 0 1-5-8.66V26.773a10 10 0 0 1 5-8.66L34 1.886Z"
+    />
+    <Defs>
+      <LinearGradient
+        id="a"
+        x1={-18.619}
+        x2={92.21}
+        y1={87}
+        y2={83.576}
+        gradientUnits="userSpaceOnUse">
+        <Stop stopColor="#FF912C" />
+        <Stop offset={1} stopColor="#FFCC17" />
+      </LinearGradient>
+    </Defs>
+  </Svg>
+);
+
 export default {
   Eye,
   EyeOff,
@@ -384,4 +410,5 @@ export default {
   CircleBlue,
   DividerVertical,
   Add,
+  Hexagon,
 };

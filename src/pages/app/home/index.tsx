@@ -14,6 +14,8 @@ import Banners from '../../../components/pages/banners';
 import Solicitations from '../../../components/pages/solicitations';
 import Rate from '../../../hooks/rate';
 import Rates from '../../../components/pages/rates';
+import userPvs from '../../../assets/config/user-pvs';
+import Metrics from '../../../components/pages/metrics';
 
 const Home: React.FC = ({navigation}: any) => {
   const {signOut, user} = useContext(AuthContext);
@@ -58,20 +60,25 @@ const Home: React.FC = ({navigation}: any) => {
   return (
     <SafeAreaView style={styles.container}>
       <Header />
+      <View style={{flexDirection: 'row'}}>
+        <Divider />
+
+        <TouchableOpacity
+          onPress={signOut}
+          style={{
+            backgroundColor: 'orange',
+            width: 200,
+            height: 30,
+          }}>
+          <Text>Sair</Text>
+        </TouchableOpacity>
+      </View>
       <View style={styles.body}>
-        <View style={{flexDirection: 'row'}}>
-          <Divider />
-
-          <TouchableOpacity onPress={signOut}>
-            <Text>Sair</Text>
-          </TouchableOpacity>
-        </View>
-
         <Banners />
+        {user.pv !== userPvs.consumer && <Metrics />}
         <Divider />
         <Solicitations />
         <Divider size="sm" />
-        {user.pv !== 1 && <Rates />}
       </View>
 
       {isOpenConfirmedPhoneModal ? (

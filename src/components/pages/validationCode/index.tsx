@@ -41,7 +41,7 @@ const ValidationCode = ({
 
     return phoneNumber.replace(regex, '$1*****-$3');
   };
-
+  console.log(rightCode);
   return (
     <ContentModal isVisible={true}>
       <View style={styles.content}>

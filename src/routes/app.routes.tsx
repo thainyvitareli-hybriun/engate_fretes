@@ -14,12 +14,11 @@ import Search from '../pages/app/search';
 import Chat from '../pages/app/chat';
 import {Text} from '../components/atoms';
 import TabBar from '../components/atoms/custom-tab';
-import {AuthContext} from '../contexts';
-import {useContext} from 'react';
-import userPvs from '../assets/config/user-pvs';
-import InfoSolicitation from '../pages/app/solicitation';
 
-let OPTIONS = [
+import InfoSolicitation from '../pages/app/solicitation';
+import Plans from '../pages/app/plans';
+
+const OPTIONS = [
   {
     name: 'Home',
     icon: (fill: string) => <Icons.Home fill={fill} />,
@@ -38,23 +37,15 @@ let OPTIONS = [
     component: Chat,
     label: '',
   },
+  {
+    name: 'Search',
+    icon: (fill: string) => <Icons.Search fill={fill} />,
+    component: Search,
+    label: '',
+  },
 ];
 
 const TabNavigator = () => {
-  const {user} = useContext(AuthContext);
-
-  if (user.pv !== userPvs.consumer) {
-    OPTIONS = [
-      ...OPTIONS,
-      {
-        name: 'Search',
-        icon: (fill: string) => <Icons.Search fill={fill} />,
-        component: Search,
-        label: '',
-      },
-    ];
-  }
-
   return (
     <Tab.Navigator
       tabBar={props => <TabBar {...props} />}
@@ -107,6 +98,7 @@ const AppRoutes = () => {
         component={News}
       />
       <Stack.Screen name="Solicitation" component={InfoSolicitation} />
+      <Stack.Screen name="Plans" component={Plans} />
     </Stack.Navigator>
   );
 };

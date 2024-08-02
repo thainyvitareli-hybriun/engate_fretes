@@ -1,10 +1,12 @@
 import {AxiosResponse} from 'axios';
 import {api} from '../../services';
-import {iRate, iRates} from '../../interfaces/rate';
+import {iAPIFindMany} from '../../interfaces/rate';
 
 const findMany = async () => {
   try {
-    const {data: result} = (await api.get('/rates')) as AxiosResponse<iRates>;
+    const {data: result} = (await api.get(
+      '/rates',
+    )) as AxiosResponse<iAPIFindMany>;
 
     return result;
   } catch (error) {}

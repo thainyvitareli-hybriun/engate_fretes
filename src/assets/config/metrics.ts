@@ -1,6 +1,7 @@
 export default {
   body: {
     padding: 80,
+    gap: 15,
   },
   input: {
     height: 120,

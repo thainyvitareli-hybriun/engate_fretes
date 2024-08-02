@@ -1,4 +1,4 @@
-export interface iRates {
+export interface iAPIFindMany {
   total: number;
   records: iRate[];
 }
@@ -6,8 +6,8 @@ export interface iRates {
 export interface iRate {
   id: number;
   transport_request_id: number;
-  rated_by: number;
-  received_by: number;
+  rated_by: string;
+  avatar: string;
   stars: number;
   description: string;
   created_at: string;

@@ -18,4 +18,8 @@ export default StyleSheet.create({
     gap: 30,
     alignItems: 'center',
   },
+  image: {
+    width: 45,
+    height: 45,
+  },
 });
