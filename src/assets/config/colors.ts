@@ -3,6 +3,7 @@ export default {
   primary: '#127DFD',
   secondary: '#FF912C',
   color: '#FFFFFF',
+  lightGray: '#EBEBEB',
   button: {
     background: '#127DFD',
     color: '#FFFFFF',
@@ -21,6 +22,9 @@ export default {
   },
   text: {
     color: '#22222C',
+    black: '#22222C',
+    gray: '#8E95AE',
+    white: '#FFFFFF',
   },
   fonts: {
     p: '#000000',

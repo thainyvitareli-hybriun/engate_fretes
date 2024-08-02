@@ -7,8 +7,13 @@ import {AuthContext} from '../../../contexts';
 import {Header} from '../../../components/molecules';
 import {Divider, Text} from '../../../components/atoms';
 import ValidationCode from '../../../components/pages/validationCode';
-import {UserHooks} from '../../../hooks';
+import {BannerHooks, UserHooks} from '../../../hooks';
 import {useFormik} from 'formik';
+import {iBanners} from '../../../interfaces/banner';
+import Banners from '../../../components/pages/banners';
+import Solicitations from '../../../components/pages/solicitations';
+import Rate from '../../../hooks/rate';
+import Rates from '../../../components/pages/rates';
 
 const Home: React.FC = ({navigation}: any) => {
   const {signOut, user} = useContext(AuthContext);
@@ -53,20 +58,20 @@ const Home: React.FC = ({navigation}: any) => {
   return (
     <SafeAreaView style={styles.container}>
       <Header />
-
       <View style={styles.body}>
-        <TouchableOpacity
-          onPress={() => {
-            navigation.navigate('News');
-          }}>
-          <Text>Novidades</Text>
-        </TouchableOpacity>
+        <View style={{flexDirection: 'row'}}>
+          <Divider />
 
+          <TouchableOpacity onPress={signOut}>
+            <Text>Sair</Text>
+          </TouchableOpacity>
+        </View>
+
+        <Banners />
         <Divider />
-
-        <TouchableOpacity onPress={signOut}>
-          <Text>Sair</Text>
-        </TouchableOpacity>
+        <Solicitations />
+        <Divider size="sm" />
+        {user.pv !== 1 && <Rates />}
       </View>
 
       {isOpenConfirmedPhoneModal ? (

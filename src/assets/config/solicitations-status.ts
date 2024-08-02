@@ -1,0 +1,16 @@
+export default {
+  awaiting_offers: 1,
+  in_negotiation: 2,
+  in_progress: 3,
+  finish: 4,
+  canceled: 5,
+  loading: 6,
+  paused: 7,
+  arrival_location: 8,
+  charging_started: 9,
+  charging_finished: 10,
+  awaiting_release: 11,
+  way_destination: 12,
+  start_unloading: 13,
+  completion_download: 14,
+};

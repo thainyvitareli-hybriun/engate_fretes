@@ -1,10 +1,12 @@
 import * as React from 'react';
 import Svg, {
+  Circle,
   ClipPath,
   Defs,
   G,
   LinearGradient,
   Path,
+  Rect,
   Stop,
 } from 'react-native-svg';
 
@@ -232,6 +234,135 @@ const DashedLine = (props: any) => (
   </Svg>
 );
 
+const EmojiSadness = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={52}
+    height={52}
+    fill="none"
+    {...props}>
+    <G clipPath="url(#a)">
+      <Path
+        fill="#8E95AE"
+        d="M26 52a26 26 0 1 1 26-26 26.028 26.028 0 0 1-26 26Zm0-47.667A21.666 21.666 0 1 0 47.667 26 21.69 21.69 0 0 0 26 4.333Zm12.276 30.884A20.484 20.484 0 0 0 26 30.333a20.484 20.484 0 0 0-12.276 4.884l2.881 3.237A16.267 16.267 0 0 1 26 34.667a16.267 16.267 0 0 1 9.395 3.787l2.881-3.237ZM13 21.667v2.166h8.667v-2.166a4.333 4.333 0 0 0-8.667 0Zm17.333 0v2.166H39v-2.166a4.333 4.333 0 1 0-8.667 0Z"
+        opacity={0.6}
+      />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M0 0h52v52H0z" />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
+
+const DoubleArrowRight = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={9}
+    height={9}
+    fill="none"
+    {...props}>
+    <G fill="#AFAFAF" clipPath="url(#a)">
+      <Path d="M4.436 9a.375.375 0 0 1-.265-.64l3.065-3.065a1.125 1.125 0 0 0 0-1.59L4.17.64a.375.375 0 1 1 .53-.53l3.065 3.064a1.875 1.875 0 0 1 0 2.652L4.7 8.89a.375.375 0 0 1-.265.11Z" />
+      <Path d="M.685 9a.375.375 0 0 1-.265-.64l3.595-3.595a.375.375 0 0 0 0-.53L.42.64A.375.375 0 0 1 .95.11l3.595 3.595a1.125 1.125 0 0 1 0 1.59L.951 8.89A.375.375 0 0 1 .685 9Z" />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M0 0h9v9H0z" />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
+
+const CircleOrange = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={8}
+    height={8}
+    fill="none"
+    {...props}>
+    <Circle cx={4} cy={4} r={4} fill="url(#a)" />
+    <Defs>
+      <LinearGradient
+        id="a"
+        x1={-1.238}
+        x2={8.837}
+        y1={8}
+        y2={7.689}
+        gradientUnits="userSpaceOnUse">
+        <Stop stopColor="#FF912C" />
+        <Stop offset={1} stopColor="#FFCC17" />
+      </LinearGradient>
+    </Defs>
+  </Svg>
+);
+
+const CircleBlue = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={8}
+    height={8}
+    fill="none"
+    {...props}>
+    <Circle cx={4} cy={4} r={4} fill="url(#a)" />
+    <Defs>
+      <LinearGradient
+        id="a"
+        x1={8.304}
+        x2={-0.128}
+        y1={4}
+        y2={4.038}
+        gradientUnits="userSpaceOnUse">
+        <Stop stopColor="#20D7FF" />
+        <Stop offset={1} stopColor="#2A69E3" />
+      </LinearGradient>
+    </Defs>
+  </Svg>
+);
+
+const DividerVertical = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={2}
+    height={17}
+    fill="none"
+    {...props}>
+    <Path
+      stroke="#D1D1D1"
+      strokeDasharray="4 6"
+      strokeLinecap="round"
+      strokeWidth={2}
+      d="M1 1v15"
+    />
+  </Svg>
+);
+
+const Add = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={20}
+    height={20}
+    fill="none"
+    {...props}>
+    <G clipPath="url(#a)">
+      <Path
+        fill="#4B4F5E"
+        d="M20 15a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5h10a5 5 0 0 1 5 5v10ZM1.667 13.333a5 5 0 0 0 5 5h6.666a5 5 0 0 0 5-5V6.667a5 5 0 0 0-5-5H6.667a5 5 0 0 0-5 5v6.666Z"
+      />
+    </G>
+    <Path
+      fill="#4B4F5E"
+      d="M10.833 9.167V5H9.167v4.167H5v1.666h4.167V15h1.666v-4.167H15V9.167h-4.167Z"
+    />
+    <Defs>
+      <ClipPath id="a">
+        <Rect width={20} height={20} fill="#fff" rx={5} />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
+
 export default {
   Eye,
   EyeOff,
@@ -247,4 +378,10 @@ export default {
   Search,
   Chat,
   DashedLine,
+  EmojiSadness,
+  DoubleArrowRight,
+  CircleOrange,
+  CircleBlue,
+  DividerVertical,
+  Add,
 };

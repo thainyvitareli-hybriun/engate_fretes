@@ -37,7 +37,11 @@ const Header = ({hasBack}: iHeader) => {
             <Text style={styles.userName}>{user.name}</Text>
           </View>
           <View style={styles.settings}>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => {
+                //@ts-ignore
+                navigation.navigate('News');
+              }}>
               <Icons.Notification />
             </TouchableOpacity>
             <TouchableOpacity>

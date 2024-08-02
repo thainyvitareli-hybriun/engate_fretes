@@ -13,7 +13,7 @@ const Chat: React.FC = ({navigation}: any) => {
     <SafeAreaView style={styles.container}>
       <Header />
 
-      <Text>Agendamentos</Text>
+      <Text>Chat</Text>
     </SafeAreaView>
   );
 };
