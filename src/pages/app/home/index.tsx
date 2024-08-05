@@ -59,19 +59,9 @@ const Home: React.FC = ({navigation}: any) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Header />
+      <Header.Default />
       <View style={{flexDirection: 'row'}}>
         <Divider />
-
-        <TouchableOpacity
-          onPress={signOut}
-          style={{
-            backgroundColor: 'orange',
-            width: 200,
-            height: 30,
-          }}>
-          <Text>Sair</Text>
-        </TouchableOpacity>
       </View>
       <View style={styles.body}>
         <Banners />

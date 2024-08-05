@@ -389,12 +389,109 @@ const Hexagon = (props: any) => (
   </Svg>
 );
 
+const Car = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={18}
+    fill="none"
+    {...props}>
+    <G clipPath="url(#a)">
+      <Path
+        fill="#4B4F5E"
+        d="M15 8.25h-.75v-4.5a3 3 0 0 0-3-3H3a3 3 0 0 0-3 3V12a2.245 2.245 0 0 0 1.553 2.129 2.55 2.55 0 0 0-.053.496 2.625 2.625 0 0 0 5.25 0 2.599 2.599 0 0 0-.03-.375h4.56c-.018.124-.029.25-.03.375a2.625 2.625 0 0 0 5.25 0 2.557 2.557 0 0 0-.053-.496A2.245 2.245 0 0 0 18 12v-.75a3 3 0 0 0-3-3Zm-13.5 0v-3H3v3H1.5Zm3-3H6v3H4.5v-3Zm3 0h2.25v7.5H7.5v-7.5Zm3.75 0h1.5v3h-1.5v-3ZM3 2.25h8.25a1.5 1.5 0 0 1 1.5 1.5H1.5A1.5 1.5 0 0 1 3 2.25Zm-1.5 7.5H6v3H2.25A.75.75 0 0 1 1.5 12V9.75Zm3.75 4.875a1.125 1.125 0 0 1-2.25 0c0-.128.024-.255.07-.375h2.11c.046.12.07.247.07.375Zm8.625 1.125a1.125 1.125 0 0 1-1.125-1.125c0-.128.024-.255.07-.375h2.11c.046.12.07.247.07.375a1.125 1.125 0 0 1-1.125 1.125ZM16.5 12a.75.75 0 0 1-.75.75h-4.5v-3H15a1.5 1.5 0 0 1 1.5 1.5V12Z"
+      />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M0 0h18v18H0z" />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
+
+const SignOut = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={18}
+    fill="none"
+    {...props}>
+    <G fill="#4B4F5E" clipPath="url(#a)">
+      <Path d="M5.25 16.5h-1.5a2.25 2.25 0 0 1-2.25-2.25V3.75A2.25 2.25 0 0 1 3.75 1.5h1.5a.75.75 0 0 0 0-1.5h-1.5A3.755 3.755 0 0 0 0 3.75v10.5A3.754 3.754 0 0 0 3.75 18h1.5a.75.75 0 1 0 0-1.5Z" />
+      <Path d="m13.903 14.03 3.44-3.44a2.255 2.255 0 0 0 0-3.18l-3.44-3.44a.75.75 0 0 0-1.06 1.06l3.219 3.22H4.5a.75.75 0 0 0 0 1.5h11.563l-3.22 3.22a.75.75 0 1 0 1.06 1.06Z" />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M0 0h18v18H0z" />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
+
+const CreditCard = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    {...props}>
+    <Path fill="#4B4F5E" d="M5.5 17a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" />
+    <Path
+      fill="#4B4F5E"
+      d="M19 3H5C2.2 3 0 5.2 0 8v8c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5V8c0-2.8-2.2-5-5-5ZM5 5h14c1.7 0 3 1.3 3 3H2c0-1.7 1.3-3 3-3Zm14 14H5c-1.7 0-3-1.3-3-3v-6h20v6c0 1.7-1.3 3-3 3Z"
+    />
+  </Svg>
+);
+
+const Security = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={18}
+    height={18}
+    fill="none"
+    {...props}>
+    <G fill="#4B4F5E" clipPath="url(#a)">
+      <Path d="M13.936 1.605 9.237.038a.75.75 0 0 0-.474 0L4.064 1.605A3.745 3.745 0 0 0 1.5 5.162V9c0 5.672 6.9 8.805 7.195 8.935a.75.75 0 0 0 .61 0C9.6 17.805 16.5 14.672 16.5 9V5.162a3.745 3.745 0 0 0-2.564-3.557ZM15 9c0 4.091-4.74 6.775-6 7.417-1.262-.64-6-3.315-6-7.417V5.162a2.25 2.25 0 0 1 1.539-2.134L9 1.54l4.461 1.488A2.25 2.25 0 0 1 15 5.162V9Z" />
+      <Path d="m11.475 6.225-3.14 3.15L6.65 7.62a.75.75 0 1 0-1.08 1.04l1.729 1.8a1.403 1.403 0 0 0 1.009.45h.024a1.405 1.405 0 0 0 1.002-.415l3.204-3.204a.752.752 0 1 0-1.064-1.066Z" />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M0 0h18v18H0z" />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
+
+const Close = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={17}
+    height={17}
+    viewBox="0 -960 960 960"
+    {...props}>
+    <Path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+  </Svg>
+);
+
+const Check = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={17}
+    height={17}
+    viewBox="0 -960 960 960"
+    {...props}>
+    <Path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+  </Svg>
+);
+
 export default {
   Eye,
   EyeOff,
   ArrowLeft,
   Home,
   CloseLock,
+  Close,
   OpenLock,
   User,
   LogoIcon,
@@ -411,4 +508,9 @@ export default {
   DividerVertical,
   Add,
   Hexagon,
+  Car,
+  SignOut,
+  CreditCard,
+  Security,
+  Check,
 };

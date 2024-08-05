@@ -3,6 +3,7 @@ import {Mask} from '@tboerc/maskfy';
 import {api} from '../../services';
 import {iModal} from '../../interfaces/components';
 import {iRegister, iSession} from '../../interfaces/hooks/user';
+import {Alert} from 'react-native';
 
 const session = async (
   setModal: (modal: iModal) => void,
@@ -92,7 +93,13 @@ const register = async (
 };
 
 const update = async (data: any) => {
-  const {data: resp} = await api.patch('/users', data);
+  const {data: resp} = await api.patch('/users', data, {
+    headers: {
+      'Content-Type': 'multipart/form-data',
+    },
+  });
+
+  console.log(resp);
 
   return resp;
 };

@@ -17,6 +17,8 @@ import TabBar from '../components/atoms/custom-tab';
 
 import InfoSolicitation from '../pages/app/solicitation';
 import Plans from '../pages/app/plans';
+import Settings from '../pages/app/settings';
+import Profile from '../pages/app/profile';
 
 const OPTIONS = [
   {
@@ -99,6 +101,8 @@ const AppRoutes = () => {
       />
       <Stack.Screen name="Solicitation" component={InfoSolicitation} />
       <Stack.Screen name="Plans" component={Plans} />
+      <Stack.Screen name="Settings" component={Settings} />
+      <Stack.Screen name="Profile" component={Profile} />
     </Stack.Navigator>
   );
 };

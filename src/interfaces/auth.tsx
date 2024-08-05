@@ -4,12 +4,22 @@ export interface iUser {
   id: number;
   pv: number;
   name: string;
+  avatar?: string;
+  email: string;
   phone: string;
   access_token: string;
   phone_confirmed: boolean;
-  profile?: Profile;
+  profile?: iProfile;
   status: number;
   total_coins: number;
+  vehicles?: [
+    {
+      id: number;
+      brand: string;
+      model: string;
+    },
+  ];
+  company?: {};
 }
 
 export interface iAuth {
@@ -17,16 +27,17 @@ export interface iAuth {
   signIn: (values: iUser) => void;
   signOut: () => void;
   isLogged: () => {};
+  updateUser: (data: iUser) => void;
 }
 
-export interface Profile {
-  address?: Address;
+export interface iProfile {
+  address?: iAddress;
   birth_date: string;
   cnh_expiry_date: any;
   document: string;
 }
 
-export interface Address {
+export interface iAddress {
   city: string;
   complement: string;
   created_at: string;

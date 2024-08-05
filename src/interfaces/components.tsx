@@ -68,6 +68,8 @@ export interface iButton extends TouchableOpacityProps {
 
 export interface iHeader {
   hasBack?: boolean;
+  title?: string;
+  userName?: string;
 }
 
 export interface iTextInput extends TextInputProps {

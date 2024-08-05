@@ -44,8 +44,12 @@ export const AuthProvider: React.FC = ({children}: any) => {
     return false;
   };
 
+  const updateUser = (data: iUser) => {
+    setUser(prevState => ({...prevState, ...data}));
+  };
+
   return (
-    <AuthContext.Provider value={{user, signIn, signOut, isLogged}}>
+    <AuthContext.Provider value={{user, updateUser, signIn, signOut, isLogged}}>
       {children}
     </AuthContext.Provider>
   );
