@@ -7,18 +7,13 @@ import {colors} from '../../../assets/config';
 import {iInput} from '../../../interfaces/components';
 import LinearGradient from 'react-native-linear-gradient';
 
-const Input = ({hasError, showUserIcon = false, ...props}: iInput) => {
+const Input = ({hasError, showIcon = false, icon, ...props}: iInput) => {
   const [isFocused, setIsFocused] = useState(false);
   const [showPassword, setShowPassword] = useState(
     props.secureTextEntry ?? false,
   );
 
   return (
-    // <LinearGradient
-    //   colors={['#E1FDFE', '#F9FEFA', '#F9FEFA', '#FDF6DD', '#FFF4D1']}
-    //   style={styles.gradient}
-    //   start={{x: 1, y: 0}}
-    //   end={{x: 0, y: 1}}>
     <View
       style={[
         styles.container,
@@ -36,11 +31,7 @@ const Input = ({hasError, showUserIcon = false, ...props}: iInput) => {
           )}
         </TouchableOpacity>
       )}
-      {showUserIcon && (
-        <View style={styles.showUserIcon}>
-          <Icons.User />
-        </View>
-      )}
+      {showIcon && <View style={styles.showUserIcon}>{icon}</View>}
       <TextInput
         {...props}
         onFocus={() => setIsFocused(true)}
@@ -49,7 +40,6 @@ const Input = ({hasError, showUserIcon = false, ...props}: iInput) => {
         secureTextEntry={showPassword}
       />
     </View>
-    // </LinearGradient>
   );
 };
 

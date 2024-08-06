@@ -20,7 +20,8 @@ export interface iDivider {
 
 export interface iInput extends TextInputProps {
   hasError?: boolean | undefined;
-  showUserIcon?: boolean;
+  showIcon?: boolean;
+  icon?: any;
 }
 
 export interface iText extends TextProps {
@@ -78,7 +79,8 @@ export interface iTextInput extends TextInputProps {
   label?: string;
   touched?: boolean;
   error?: string;
-  showUserIcon?: boolean;
+  showIcon?: boolean;
+  icon?: any;
 }
 
 export interface iCheckBox extends CheckBoxProps {

@@ -63,7 +63,8 @@ const Login = ({navigation}: any) => {
               onBlur={formik.handleBlur('phone')}
               touched={formik.touched.phone}
               error={formik.errors.phone}
-              showUserIcon
+              showIcon
+              icon={<Icons.User />}
             />
             <Divider size="xs" />
             <TextInput
