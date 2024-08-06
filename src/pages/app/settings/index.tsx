@@ -33,7 +33,7 @@ export default function Settings() {
       {
         icon: <Icons.Car />,
         title: 'Meus Veículos',
-        onPress: () => navigator.navigate('Home'),
+        onPress: () => navigator.navigate('Vehicle'),
         onlyDriverCanAccess: true,
       },
       {

@@ -15,6 +15,13 @@ export default StyleSheet.create({
     padding: 30,
     gap: 20,
     flexDirection: 'column',
+    // Shadow for iOS
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 3},
+    shadowOpacity: 0.1,
+    shadowRadius: 10,
+    // Shadow for Android
+    elevation: 5,
   },
   itemDate: {
     flexDirection: 'row',

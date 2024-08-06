@@ -6,7 +6,6 @@ import styles from './styles';
 import {Icons, Logo} from '../../../assets/svg';
 import {iHeader} from '../../../interfaces/components';
 import {AuthContext} from '../../../contexts';
-import colors from '../../../assets/config/colors';
 import Text from '../../atoms/text';
 
 const Default = () => {
@@ -49,18 +48,25 @@ const Default = () => {
   );
 };
 
-const Alt = ({hasBack, title, userName}: iHeader) => {
+const Alt = ({hasBack, title, userName, icon, onPressIcon}: iHeader) => {
   const navigation = useNavigation();
 
   return (
     <View style={[styles.altContainer]}>
-      <View style={styles.row}>
-        {hasBack && (
-          <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Icons.ArrowLeft fill={'white'} />
-          </TouchableOpacity>
+      <View style={[styles.row, styles.spaceBetween]}>
+        <View style={styles.row}>
+          {hasBack && (
+            <TouchableOpacity onPress={() => navigation.goBack()}>
+              <Icons.ArrowLeft fill={'white'} />
+            </TouchableOpacity>
+          )}
+          <Text color="white" type="subtitle" weight="500">
+            {title}
+          </Text>
+        </View>
+        {icon && (
+          <TouchableOpacity onPress={onPressIcon}>{icon}</TouchableOpacity>
         )}
-        <Text color="white">{title}</Text>
       </View>
       <Text style={styles.altUserName} type="title">
         {userName}

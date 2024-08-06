@@ -30,8 +30,8 @@ const Button = ({
   width = 270,
   height = 40,
   outline = false,
-  backgroundColor = colors.primary,
-  color = 'white',
+  backgroundColor = colors.darkLight,
+  color = colors.darkLight,
   weight = 'normal',
   ...props
 }: iButton) => {
@@ -84,7 +84,7 @@ const Button = ({
         style={[
           styles.button,
           outline
-            ? {borderColor: backgroundColor}
+            ? {borderColor: backgroundColor, borderStyle: 'dashed'}
             : {backgroundColor, borderColor: backgroundColor},
           {
             width: width !== 'full' ? width : '100%',

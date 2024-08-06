@@ -31,7 +31,7 @@ export default StyleSheet.create({
   row: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: metrics.body.padding,
+    gap: metrics.padding.md,
   },
 
   altContainer: {
@@ -51,5 +51,8 @@ export default StyleSheet.create({
     borderWidth: 2,
     borderColor: colors.secondary,
     resizeMode: 'cover',
+  },
+  spaceBetween: {
+    justifyContent: 'space-between',
   },
 });

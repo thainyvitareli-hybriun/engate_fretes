@@ -9,6 +9,6 @@ export default StyleSheet.create({
     borderWidth: 4,
     alignItems: 'center',
     justifyContent: 'center',
-    borderRadius: metrics.button.radius * 10,
+    borderRadius: metrics.button.radius * 2,
   },
 });

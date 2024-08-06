@@ -485,6 +485,27 @@ const Check = (props: any) => (
   </Svg>
 );
 
+const Plus = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={17}
+    height={17}
+    fill="none"
+    {...props}>
+    <G clipPath="url(#a)">
+      <Path
+        fill={props.fill || '#fff'}
+        d="M16.292 7.792H9.208V.708A.708.708 0 0 0 8.5 0a.708.708 0 0 0-.708.708v7.084H.708A.708.708 0 0 0 0 8.5a.708.708 0 0 0 .708.708h7.084v7.084a.708.708 0 0 0 1.416 0V9.208h7.084a.708.708 0 0 0 0-1.416Z"
+      />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M0 0h17v17H0z" />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
+
 export default {
   Eye,
   EyeOff,
@@ -513,4 +534,5 @@ export default {
   CreditCard,
   Security,
   Check,
+  Plus,
 };

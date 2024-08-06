@@ -70,6 +70,8 @@ export interface iHeader {
   hasBack?: boolean;
   title?: string;
   userName?: string;
+  icon?: any;
+  onPressIcon?: () => void;
 }
 
 export interface iTextInput extends TextInputProps {

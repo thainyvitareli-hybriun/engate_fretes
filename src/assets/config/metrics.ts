@@ -27,4 +27,10 @@ export default {
     padding: 15,
     borderRadios: 30,
   },
+  padding: {
+    xl: 5,
+    sm: 20,
+    md: 40,
+    lg: 80,
+  },
 };

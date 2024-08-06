@@ -1,9 +1,11 @@
 export default {
   background: '#ffffff',
-  primary: '#127DFD',
+  backgroundGray: '#4B4F5D',
+  primary: '#8E95AE',
   secondary: '#FF912C',
   color: '#FFFFFF',
   lightGray: '#EBEBEB',
+  darkLight: '#4B4F5E',
   button: {
     background: '#127DFD',
     color: '#FFFFFF',
