@@ -6,7 +6,6 @@ const CustomTabBar = ({state, descriptors, navigation}: any) => {
   return (
     <View style={styles.tabBar}>
       {state.routes.map((route: any, index: any) => {
-        console.log(route.key);
         const {options} = descriptors[route.key];
         const isFocused = state.index === index;
         const icon = options?.tabBarIcon({focused: isFocused});

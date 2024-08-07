@@ -54,6 +54,7 @@ export default function Banners() {
         mode="parallax"
         renderItem={({item}) => (
           <TouchableOpacity
+            key={item.id}
             onPress={() => handleLink(item.link, item.link_type)}>
             <Image source={{uri: item.uri}} style={styles.image} />
           </TouchableOpacity>

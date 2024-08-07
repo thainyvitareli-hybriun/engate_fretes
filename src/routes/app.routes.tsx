@@ -19,7 +19,8 @@ import InfoSolicitation from '../pages/app/solicitation';
 import Plans from '../pages/app/plans';
 import Settings from '../pages/app/settings';
 import Profile from '../pages/app/profile';
-import Vehicle from '../pages/vehicle';
+import Vehicle from '../pages/app/vehicle';
+import CreateOrEditVehicle from '../pages/app/vehicle/createOrEdit';
 
 const OPTIONS = [
   {
@@ -105,6 +106,10 @@ const AppRoutes = () => {
       <Stack.Screen name="Settings" component={Settings} />
       <Stack.Screen name="Profile" component={Profile} />
       <Stack.Screen name="Vehicle" component={Vehicle} />
+      <Stack.Screen
+        name="CreateOrEditVehicle"
+        component={CreateOrEditVehicle}
+      />
     </Stack.Navigator>
   );
 };

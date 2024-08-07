@@ -11,7 +11,7 @@ const Chat: React.FC = ({navigation}: any) => {
   const {signOut} = useContext(AuthContext);
   return (
     <SafeAreaView style={styles.container}>
-      <Header />
+      <Header.Alt />
 
       <Text>Chat</Text>
     </SafeAreaView>

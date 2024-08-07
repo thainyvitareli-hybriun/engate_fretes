@@ -24,3 +24,23 @@ export interface iVehicle {
     };
   };
 }
+
+export interface iCreateVehicle {
+  license_plate: string;
+  color: string;
+  model: string;
+  brand: string;
+  year: string;
+  vehicle_front: Blob | {uri: string; type: string; fileName: string};
+  vehicle_back: Blob | {uri: string; type: string; fileName: string};
+  vehicle_left: Blob | {uri: string; type: string; fileName: string};
+  vehicle_right: Blob | {uri: string; type: string; fileName: string};
+  document: Blob | {uri: string; type: string; fileName: string};
+}
+
+export interface iUpdateVehicle {
+  id: string | number;
+  license_plate: string;
+  color: string;
+  status?: number;
+}

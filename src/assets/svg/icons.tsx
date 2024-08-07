@@ -506,6 +506,67 @@ const Plus = (props: any) => (
   </Svg>
 );
 
+const Document = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={17}
+    height={17}
+    fill="none"
+    {...props}>
+    <G clipPath="url(#a)">
+      <Path
+        fill="#4B4F5E"
+        d="M14.25.75H3.75A3.755 3.755 0 0 0 0 4.5v9a3.754 3.754 0 0 0 3.75 3.75h10.5A3.754 3.754 0 0 0 18 13.5v-9A3.755 3.755 0 0 0 14.25.75Zm-10.5 1.5h10.5A2.25 2.25 0 0 1 16.5 4.5v.75h-15V4.5a2.25 2.25 0 0 1 2.25-2.25Zm10.5 13.5H3.75A2.25 2.25 0 0 1 1.5 13.5V6.75h15v6.75a2.25 2.25 0 0 1-2.25 2.25Zm0-6a.75.75 0 0 1-.75.75h-9a.75.75 0 1 1 0-1.5h9a.75.75 0 0 1 .75.75Zm-3 3a.75.75 0 0 1-.75.75h-6a.75.75 0 1 1 0-1.5h6a.75.75 0 0 1 .75.75Zm-9-9a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0Zm2.25 0a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0Zm2.25 0a.75.75 0 1 1 1.5 0 .75.75 0 0 1-1.5 0Z"
+      />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M0 0h18v18H0z" />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
+
+const CarFront = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={17}
+    height={17}
+    fill="none"
+    {...props}>
+    <G clipPath="url(#a)">
+      <Path
+        fill="#4B4F5E"
+        d="M15.313 2.231A2.256 2.256 0 0 0 13.2.75H4.8a2.256 2.256 0 0 0-2.114 1.481l-1.608 4.42A17.84 17.84 0 0 0 0 12.774v1.477h1.5v3H6v-3h6v3h4.5v-3H18v-1.477a17.838 17.838 0 0 0-1.079-6.121l-1.608-4.42Zm-11.217.513A.75.75 0 0 1 4.8 2.25h8.4a.75.75 0 0 1 .704.494l1.608 4.425c.13.357.238.721.342 1.085H2.146c.104-.364.212-.728.342-1.085l1.608-4.425ZM4.5 15.75H3v-1.5h1.5v1.5Zm10.5 0h-1.5v-1.5H15v1.5Zm-13.5-3c.003-1.007.1-2.01.286-3H3v.75a.75.75 0 1 0 1.5 0v-.75h9v.75a.75.75 0 1 0 1.5 0v-.75h1.213c.188.99.284 1.993.287 3h-15Z"
+        opacity={0.6}
+      />
+    </G>
+    <Defs>
+      <ClipPath id="a">
+        <Path fill="#fff" d="M0 0h18v18H0z" />
+      </ClipPath>
+    </Defs>
+  </Svg>
+);
+
+const Trash = (props: any) => (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={props.size || 17}
+    height={props.size || 17}
+    fill="none"
+    {...props}>
+    <Path
+      fill={props.fill || '#4B4F5E'}
+      d="M21 4h-3.1A5.01 5.01 0 0 0 13 0h-2a5.009 5.009 0 0 0-4.9 4H3a1 1 0 0 0 0 2h1v13a5.006 5.006 0 0 0 5 5h6a5.006 5.006 0 0 0 5-5V6h1a1 1 0 1 0 0-2ZM11 2h2a3.006 3.006 0 0 1 2.829 2H8.171A3.006 3.006 0 0 1 11 2Zm7 17a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3V6h12v13Z"
+    />
+    <Path
+      fill={props.fill || '#4B4F5E'}
+      d="M10 18a1 1 0 0 0 1-1v-6a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1ZM14 18a1 1 0 0 0 1-1v-6a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1Z"
+    />
+  </Svg>
+);
+
 export default {
   Eye,
   EyeOff,
@@ -535,4 +596,7 @@ export default {
   Security,
   Check,
   Plus,
+  Document,
+  CarFront,
+  Trash,
 };

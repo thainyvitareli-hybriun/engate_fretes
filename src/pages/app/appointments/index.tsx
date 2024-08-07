@@ -11,7 +11,7 @@ const Appointments: React.FC = ({navigation}: any) => {
   const {signOut} = useContext(AuthContext);
   return (
     <SafeAreaView style={styles.container}>
-      <Header />
+      <Header.Default />
 
       <Text>Agendamentos</Text>
     </SafeAreaView>

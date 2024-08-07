@@ -71,7 +71,7 @@ const Home: React.FC = ({navigation}: any) => {
         <Divider size="sm" />
       </View>
 
-      {isOpenConfirmedPhoneModal ? (
+      {isOpenConfirmedPhoneModal && user.phone_confirmed ? (
         <ValidationCode
           phone={formik.values.phone}
           showLogo={false}
