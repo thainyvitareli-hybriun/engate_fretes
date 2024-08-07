@@ -71,11 +71,4 @@ export default StyleSheet.create({
   contentImage: {
     gap: 20,
   },
-  badge: {
-    alignSelf: 'flex-end',
-    borderRadius: metrics.button.radius * 5,
-    alignItems: 'center',
-    paddingHorizontal: metrics.padding.md,
-    paddingVertical: metrics.padding.xl,
-  },
 });

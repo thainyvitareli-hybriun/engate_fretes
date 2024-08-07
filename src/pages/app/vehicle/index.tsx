@@ -24,17 +24,32 @@ import {Icons} from '../../../assets/svg';
 import {useNavigation} from '@react-navigation/native';
 
 export default function Vehicle() {
-  const [vehicles, setVehicles] = useState<iAPIFindManyVehicles>();
+  const [vehicles, setVehicles] = useState<iVehicle[]>([]);
+  const [skip, setSkip] = useState(0);
+  const [take] = useState(10);
+  const [shouldTakeMore, setShouldTakeMore] = useState(true);
+
   const navigation = useNavigation();
 
   useEffect(() => {
     getVehicles();
   }, []);
 
-  const getVehicles = async () => {
-    const result = await VehicleHooks.findMany();
+  const getVehicles = async (searchValue: string = '', shouldReset = false) => {
+    const result = await VehicleHooks.findMany({skip, take});
 
-    if (result) setVehicles(result);
+    if (result) {
+      if (searchValue || shouldReset) {
+        setShouldTakeMore(true);
+        setVehicles(result.records);
+        setSkip(0);
+      } else {
+        setVehicles(prev =>
+          skip === 0 ? result.records : [...prev, ...result.records],
+        );
+        setSkip(prevSkip => prevSkip + take);
+      }
+    }
   };
 
   function RenderItem({item}: ListRenderItemInfo<iVehicle>) {
@@ -105,7 +120,9 @@ export default function Vehicle() {
         }
       />
       <FlatList
-        data={vehicles?.records}
+        onEndReached={() => getVehicles()}
+        onEndReachedThreshold={0.3}
+        data={vehicles || []}
         renderItem={RenderItem}
         keyExtractor={item => String(item.id)}
         style={{

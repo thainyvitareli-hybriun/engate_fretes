@@ -1,3 +1,5 @@
+import iFindMany from './findMany';
+
 export interface iAPIFindManyVehicles {
   total: number;
   records: iVehicle[];
@@ -44,3 +46,5 @@ export interface iUpdateVehicle {
   color: string;
   status?: number;
 }
+
+export interface iFindManyVehiclesDTO extends iFindMany {}

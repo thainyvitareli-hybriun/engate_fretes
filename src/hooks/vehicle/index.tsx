@@ -2,13 +2,20 @@ import {AxiosResponse} from 'axios';
 import {VehicleHooks} from '..';
 import {
   iCreateVehicle,
+  iFindManyVehiclesDTO,
   iUpdateVehicle,
   iVehicle,
 } from '../../interfaces/vehicle';
 import {api} from '../../services';
 
-const findMany = async () => {
-  const {data} = await api.get('/vehicles');
+const findMany = async ({skip, take}: iFindManyVehiclesDTO) => {
+  console.log(skip, take);
+  const {data} = await api.get('/vehicles', {
+    params: {
+      skip,
+      take,
+    },
+  });
 
   return data;
 };
